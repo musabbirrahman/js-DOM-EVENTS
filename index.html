@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EVENTS</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <!-- Option 1 for event handler -->
+    <button onclick="console.log('Clicked')">Click Me</button>
+    <button onclick="console.log('Hello')">Click Me</button>
+
+    <br>
+    <!-- Option 2 for event handler -->
+     <button onclick="makeYellow()">Make Yellow</button>
+     <button onclick="makeRed()">Make Red</button>
+     <br>
+
+     <!-- Option 3 use id to make function -->
+     <button id="btn-make-blue">Make blue</button>
+    <br>
+     <!-- Option 4 addEventListener -->
+
+    <button id="btn-make-green">Make green</button>
+
+     <script>
+
+        function makeYellow(){
+            document.body.style.backgroundColor = 'yellow';
+        }
+
+        document.getElementById('btn-make-green').addEventListener('click', function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        })
+        
+       
+     </script>
+    <script src="JS/events.js"></script>
+</body>
+</html>
