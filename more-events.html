@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse event</title>
+</head>
+<body>
+    <h1>Mouse micky</h1>
+    <button id="btn-mouse">Mouse event</button>
+    <input type="text" id="user-name">
+    <script>
+        document.getElementById('btn-mouse').addEventListener('mouseenter', function(){
+            console.log('mouse entered')
+        })
+        document.getElementById('user-name').addEventListener('focus',function(){
+            console.log('User is about to write')
+        })
+        document.getElementById('user-name').addEventListener('keydown',function(event){
+            // console.log('typing', event.target.value)
+        })
+        document.getElementById('user-name').addEventListener('keyup',function(event){
+            console.log('typing', event.target.value)
+        })
+    </script>
+</body>
+</html>
